@@ -1,0 +1,27 @@
+function confirmEnding(str, target) {
+ 
+  var arr = [];
+  arr = str.split('');
+  console.log(arr);
+
+  var alvo = [];
+  alvo = target.split('');
+  console.log(alvo);
+
+  var tamArr = arr.length -1;
+  var tamAlvo = alvo.length -1;
+
+  for( let i = 0 ; i <= tamAlvo ; i++ ){
+    if( alvo[tamAlvo - i] !== arr[tamArr - i]){
+        return false;
+    }
+    console.log(i);
+  }
+  return true;
+  
+  
+ 
+  
+}
+
+confirmEnding("Bastian jesus", "jesus");
