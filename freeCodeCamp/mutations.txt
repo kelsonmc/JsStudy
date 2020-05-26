@@ -1,0 +1,33 @@
+function mutation(arr) {
+ let a = arr[0] ; a = a.toLowerCase(); 
+ let b = arr[1] ; b = b.toLowerCase();
+ a = a.split(''); console.log(a.length, a);
+ b = b.split(''); console.log(b.length, b);
+ let count = 0;
+  let tamA = a.length;
+  let tamB = b.length;
+  let perm = tamB;
+
+//console.log("perm=",perm);
+
+  for( let j = 0 ; j < tamB ; j++){
+    for ( let p =j+1 ; p < tamB ; p++){
+      if( b[j] === b[p] ){perm--; break}
+    }
+  }
+
+console.log("Números para permitir:",perm);
+
+  for ( let k = 0 ; k < tamB  ; k++){
+    for( let i = 0 ; i < tamA  ; i++){
+     if(b[k]===a[i]){count++; break;}
+    }
+  }
+  console.log("Contagem:",count,"\nEntão:");
+  
+  if(count >= perm){console.log("TRUE");return true;} else {console.log("FALSE");return false;}
+
+ 
+}
+
+mutation(["voodoo", "no"]);

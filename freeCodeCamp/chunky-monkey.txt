@@ -1,0 +1,27 @@
+     let unionArray = [];
+    let array2 = [];
+
+function chunkArrayInGroups(arr, size) {
+
+    
+   
+   
+
+    var array1 = arr.slice(); 
+    if(arr.length > size) {
+      
+              array2 = array1.splice(size);
+              unionArray.push(array1);
+              chunkArrayInGroups(array2, size);
+
+    } else {
+
+        unionArray.push(array2);
+        console.log(unionArray);
+        return unionArray;
+      
+    }
+    return unionArray;
+}
+  
+//chunkArrayInGroups(["a", "b", "c", "d"], 2);

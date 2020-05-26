@@ -1,0 +1,23 @@
+function frankenSplice(arr1, arr2, n) {
+  
+  
+  let arr4copy = arr2.slice();
+
+ // console.log(arr4copy);
+ // console.log(arr2);
+  
+  let arr3 = arr4copy.splice(n)
+ 
+  //console.log(arr4copy);
+ // console.log(arr2);
+
+  arr4copy.push(...arr1);
+  arr4copy.push(...arr3);
+ 
+  console.log(arr4copy);
+  //console.log(arr2);
+
+  return arr4copy;
+}
+
+frankenSplice([1, 2, 3], [4, 5, 6], 1); // [4,1,2,3,5,6]
