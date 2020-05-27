@@ -1,0 +1,27 @@
+function spinalCase(str) {
+  let arr = str.slice();
+  
+  arr = arr.split('');
+  const macarena = arr.length;
+  let marco = 0;
+  
+  
+  for( let i = 0 ; i < macarena ; i++ ){
+    if ((/[A-Z]/g).test(arr[i+1]) && arr[i] !== " " && arr[i] !== "_"){arr.splice(i+1, 0, " ");  }
+  }
+  
+
+  for( let i = 0 ; i < macarena ; i++ ){
+  
+  if (arr[i] === '-' ) { i++;}
+  if (arr[i] === '_' || arr[i] === " " ) { arr[i] = "-";}
+  
+  }
+  
+  arr = arr.join('');
+  arr = arr.toLowerCase();
+  console.log(arr);
+  return arr;
+}
+
+spinalCase("thisIsSpinalTap");

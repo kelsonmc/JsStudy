@@ -1,0 +1,34 @@
+function translatePigLatin(str) {
+  let arr =  str.slice();
+  let arrNoScan = arr.slice();
+  arr = arr.split("");
+  arrNoScan = arrNoScan.split("");
+  var i = 0;
+  var scan = 0;
+
+if(/[aeiou]/.test(arr[0])){
+    arr.push("way");arr = arr.join('');console.log(arr);
+    return arr;}
+
+do {
+  arr.push(arr[i]);
+  arr.shift();
+  if(/[aeiou]/.test(arr[0])){
+    arr.push("ay");arr = arr.join('');console.log(arr);
+    return arr;}
+    scan++;
+        if (scan === arrNoScan.length){
+          arrNoScan.push("ay");
+          arrNoScan = arrNoScan.join('');
+          console.log(arrNoScan);
+          return arrNoScan;}
+          
+  } while (/[bcdfghjklmnpqrstvxwyz]/.test(arr[i]))
+  
+  return arr;
+}
+
+
+
+
+translatePigLatin("rhythm");

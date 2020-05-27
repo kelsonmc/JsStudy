@@ -1,0 +1,36 @@
+function diffArray(arr1, arr2) {
+  var newArr = [];
+  
+
+  let arrA = arr1.slice();
+  let arrB = arr2.slice();
+  let arrC = [];
+  let arrD = [];
+
+  var max = 0;
+  var min = 99999;
+  let count = 0;
+
+  for ( let i = 0 ; i < arrA.length ; i++ ){
+    for (let j = 0 ; j < arrB.length ; j++ ){
+        if(arrA[i]===arrB[j]){ delete arrA[i]; delete arrB[j]; }
+    }}
+  arrC = arrC.concat(arrA);
+  arrC = arrC.concat(arrB);
+
+  for ( let i = 0 ; i < arrC.length ; i++ ){
+    if(arrC[i] !== undefined ){arrD.push(arrC[i]);}
+  }
+
+  console.log(arrA);
+  console.log(arrB);
+  console.log(arrC);
+  console.log(arrD);
+  
+ // for ( let j = 0 ; j < arr1.length ; j++){ if ( arr1[j] < min ) { min = arr1[j]; } }
+ // for ( let k = min ; k <= max ; k++ ) { count += k; } return count;
+return arrD;
+
+}
+
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
