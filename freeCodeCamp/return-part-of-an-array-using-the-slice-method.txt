@@ -1,0 +1,13 @@
+function sliceArray(anim, beginSlice, endSlice) {
+  // Only change code below this line
+var arr = anim.slice();
+console.log(arr);
+
+arr = arr.slice(beginSlice,endSlice);
+console.log(arr);
+return arr;
+
+  // Only change code above this line
+}
+var inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
+sliceArray(inputAnim, 1, 3);

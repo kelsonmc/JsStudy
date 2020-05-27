@@ -1,0 +1,11 @@
+function checkPositive(arr) {
+  // Only change code below this line
+      let arr2 = arr.slice();
+
+      return arr2.every(function(thisvalue){
+        return thisvalue > 0;
+      })
+
+  // Only change code above this line
+}
+checkPositive([1, 2, 3, -4, 5]);

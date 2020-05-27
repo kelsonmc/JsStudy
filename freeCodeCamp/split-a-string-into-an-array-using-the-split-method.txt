@@ -1,0 +1,11 @@
+function splitify(str) {
+  // Only change code below this line
+    let arr = str.slice();
+    arr = arr.split(/\W/);
+   
+    console.log(arr);
+    return arr;
+
+  // Only change code above this line
+}
+splitify("Hello World,I-am code");

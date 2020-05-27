@@ -1,0 +1,17 @@
+function nonMutatingSplice(cities) {
+  // Only change code below this line
+    var arr = cities.slice();
+    let jov= [];
+    for( let i = 0 ; i < 3 ; i ++){
+      jov.push(arr[i])
+
+    }
+
+    console.log(jov);
+  
+  return jov;
+
+  // Only change code above this line
+}
+var inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
+nonMutatingSplice(inputCities);
