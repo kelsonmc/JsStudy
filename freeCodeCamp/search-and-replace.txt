@@ -1,0 +1,26 @@
+function myReplace(str, before, after) {
+  
+  let arr = str;
+  arr = arr.split(" ");
+  let a = after;
+  a = a.split("");
+  let b = before;
+  b = b.split("");
+  
+  
+  
+  
+  if(/[A-Z]/g.test(b[0])){a[0] = a[0].toUpperCase()}
+  a = a.join('');
+  console.log(a) 
+ 
+  for( let  i = 0; i < arr.length ; i++){if(before === arr[i]){
+    arr.splice(i, 1, a);
+  }}
+  
+  arr = arr.join(' ');
+  console.log(arr);
+  return arr;
+}
+
+myReplace("Let us get back to more Coding", "Coding", "algorithms");

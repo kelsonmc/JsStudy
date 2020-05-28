@@ -1,0 +1,17 @@
+function steamrollArray(arr) {
+  let narr = arr.slice();
+  let b = [], c = [];
+  b = b.concat(...narr);
+  
+
+  for ( let i = 0 ; i < 99999 ; i ++){
+    let cheng = [];
+    cheng = cheng.concat(...b);
+    b = cheng;
+  }
+
+  console.log(b)
+  return b;
+}
+
+steamrollArray([1, {}, [3, [[4]]]])

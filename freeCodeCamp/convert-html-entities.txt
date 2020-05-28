@@ -1,0 +1,25 @@
+function convertHTML(str) {
+  
+  let arr = str;
+  arr = arr.split('');
+  console.log(arr);
+  const macarena = arr.length;
+  let b = [];
+  
+   for( let i = 0 ; i < macarena ; i++ ){
+    if ((/&/g).test(arr[i]) && arr[i] !== "&amp;"){arr.splice(i, 1, "&amp;"); }
+     if ((/[<]/g).test(arr[i]) && arr[i] !== "&lt;"){arr.splice(i, 1, "&lt;"); }
+      if ((/>/g).test(arr[i]) && arr[i] !== "&gt;"){arr.splice(i, 1, "&gt;"); }
+       if ((/'/g).test(arr[i]) && arr[i] !== "&apos;"){arr.splice(i, 1, "&apos;"); }
+        if ((/"/g).test(arr[i]) && arr[i] !== "&quot;"){arr.splice(i, 1, "&quot;"); }
+  }
+  console.log(arr);
+  b = arr.join('')
+  console.log(b)
+  
+  return b;
+
+  
+}
+
+convertHTML("Schindler's List");

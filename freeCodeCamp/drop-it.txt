@@ -1,0 +1,17 @@
+function dropElements(arr, func) {
+  let narr = arr.slice();
+  //console.log(narr);
+  let barr = narr.filter(func);
+  // console.log(barr);
+
+   for ( let i = 0 ; i <= narr.length ; i++ ){
+     if ( barr[0] === narr[i] ){
+       narr = narr.slice(i)
+       console.log(narr);
+       return narr;
+     }
+    }
+  return [];
+}
+
+dropElements([0, 1, 0, 1], function(n) {return n === 1;})

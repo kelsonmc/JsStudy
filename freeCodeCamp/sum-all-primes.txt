@@ -1,0 +1,37 @@
+function test_prime(n)
+{
+  if (n===1) { return 1; }
+  else if(n === 2){ return 2; }
+   else { for(var x = 2; x < n; x++) {
+      if(n % x === 0){ return false;}}
+    
+    return n;  
+  }
+}
+
+function next_prime(n)
+{
+  if (n===1) { return 1; }
+  else if(n === 2){ return 2; }
+   else { for(var x = 2; x < n; x++) {
+      if(n % x === 0){ return next_prime(n-1);}}
+   // console.log(n);
+    return n;  
+  }
+}
+
+
+function sumPrimes(num) {
+    let sum = 0;
+
+         for ( let i = 0 ; i <= next_prime(num) ; i++ ){
+              if( test_prime(i) !== false ){
+                   // console.log(test_prime(i));
+                    sum += test_prime(i);
+                }
+            } console.log(sum-1); return sum-1;    
+  }
+
+
+console.log(next_prime(10));
+sumPrimes(10);

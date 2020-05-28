@@ -1,0 +1,15 @@
+function uniteUnique(arr) {
+  let a = [];
+  let b = [];
+  a.push(...arguments);
+  a = b.concat(...a)
+
+ let uniqueArray = a.filter(function(a, position, self) {
+    return self.indexOf(a) == position;
+})
+
+  console.log(uniqueArray);
+  return uniqueArray;
+}
+
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);

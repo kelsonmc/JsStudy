@@ -1,0 +1,27 @@
+
+var looping = function(n) {
+    var a = 0, b = 1, f = 1;
+    for(var i = 2; i <= n; i++) {
+        f = a + b;
+        a = b;
+        b = f;
+    }
+  
+    return f;
+};
+
+function sumFibs(num) {
+  let sum = 0;
+
+  for ( let i = 0 ; num >= looping(i) ; i++ ){
+      
+      if( looping(i) % 2 !== 0 ){ sum += looping(i); }
+    
+    }
+  console.log(sum-1);  
+  return sum-1;
+}
+
+
+
+sumFibs(75025);
