@@ -1,0 +1,6 @@
+// write your code here
+const JSX = <div>
+<h1>b</h1>
+<p>a</p>
+<ul><li>b</li><li>c</li><li>a</li></ul>
+</div>
