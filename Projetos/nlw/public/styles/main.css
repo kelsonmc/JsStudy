@@ -1,36 +1,40 @@
- 
-            /* Box Model 
+ /* Box Model 
         Toda caixa tem:
         Largura ,altura, espaçamentos, alinhamentos...
         preenchimentos, bordas , cor, fundo, display...
         
         */
-
-       html{
-            font-family: 'Roboto', sans-serif;
-        }
-
-        :root{
-            --title-color:#322153;
-            --primary-color: #34CB79;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        h1,h2,h3,h4,h5,h6 {
-            font-family:'Ubuntu', sans-serif;
-            color: var(--title-color);
-        }
-
-        a{
-             text-decoration: none;
-            }
-        body{
-            background: #f0f0f5;
-            -webkit-font-smoothing: antialiased;
-        }
-
-    
+ 
+ html {
+     font-family: 'Roboto', sans-serif;
+ }
+ 
+ :root {
+     --title-color: #322153;
+     --primary-color: #34CB79;
+ }
+ 
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ 
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+     font-family: 'Ubuntu', sans-serif;
+     color: var(--title-color);
+ }
+ 
+ a {
+     text-decoration: none;
+ }
+ 
+ body {
+     background: #f0f0f5;
+     -webkit-font-smoothing: antialiased;
+ }

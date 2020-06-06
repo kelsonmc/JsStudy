@@ -65,8 +65,6 @@ function handleSelectedItem(event){
     //adicionar ou remover uma classe com javascript
     itemLi.classList.toggle("selected")
 
-    
-    
     //verificar se existem selecionados, se sim pega-los...
     const itemId = itemLi.dataset.id
     const alreadySelected = selectedItems.findIndex( item => item == itemId )
